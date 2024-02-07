@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "page2">
+    
+        {% for post in posts %}
+      
+          <img src = '/media/{{ post.image }}' id ='postImage'/>
+          <div class = "text">
+          <h3 id = "postTitle">{{ post.title }}</h3>
+          <p id = "postBody">{{ post.body|safe|truncatewords:"30"|linebreaks }}</p>
+          <a href = "{% url 'posted' post.title%}">read more</a>
+          <br/>
+          </div>
+        
+        {% endfor %}
+      
+</div>
+{% endblock %}
