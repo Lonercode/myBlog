@@ -1,2 +1,3 @@
 # myBlog
-A simple personal blog built solely with Django.
+A simple personal blog built solely with Django.<br/>
+
